@@ -53,6 +53,8 @@ a {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(1, 50px);
   width: 100vh;
+  position: absolute;
+  bottom: 4em;
   /* overflow: hidden; */
 }
 
