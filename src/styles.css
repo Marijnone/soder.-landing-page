@@ -1,10 +1,14 @@
 /*  Basic Styling
 -------------------------------------------- */
 
+
+
 @font-face {
-  /* Gatekeeper: font-family on another element must match this to be used. */
   font-family: "OPPOSIT";
-  src: url(../font/OPPOSIT-BLACK.otf) ("otf");
+  font-style: normal;
+  font-weight: 400;
+  src: url("./font/opposit-black-webfont.woff2") format(woff2);
+  src: url("./font/opposit-black-webfont.woff") format(woff);
 }
 
 * {
