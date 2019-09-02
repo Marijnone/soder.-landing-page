@@ -3,9 +3,8 @@
 
 @font-face {
   /* Gatekeeper: font-family on another element must match this to be used. */
-  font-family: "GT Walsheim Bold";
-
-  src: url(../font/GT\Walsheim\Bold.otf) ("otf");
+  font-family: "OPPOSIT";
+  src: url(../font/OPPOSIT-BLACK.otf) ("otf");
 }
 
 * {
@@ -14,11 +13,13 @@
 
 html {
   font-family: Helvetica, sans-serif;
-  background: black;
-  color: whitesmoke;
+  background-color: #0010ae;
+}
+body {
+  overflow: hidden;
 }
 h1 {
-  font-family: GT Walsheim;
+  font-family: OPPOSIT;
   /* font-style: italic; */
   font-weight: 600;
   font-size: 8rem;
@@ -29,23 +30,19 @@ h1 {
 }
 
 .bigTitle {
-  color:darkgrey;
+  color: #ffc06a;
   position: absolute;
-}
-button {
-  z-index: 99;
 }
 
 canvas {
-  /* position: relative; */
   vertical-align: bottom;
 }
 
 a {
-  /* font-family: GT Walsheim; */
+  font-family: OPPOSIT;
   text-decoration: none;
   font-weight: 100;
-  color: darkkhaki;
+  color: #ffc06a;
   font-size: 2rem;
   display: grid;
   justify-items: center;
@@ -54,5 +51,42 @@ a {
 .connections {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 75px);
+  grid-template-rows: repeat(1, 50px);
+  width: 100vh;
+  /* overflow: hidden; */
 }
+
+.connections a {
+  position: relative;
+  animation: animate 10s linear infinite alternate;
+}
+
+.connections a::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #fc2f70;
+  transform-origin: center right;
+  transform: scaleX(0) translateY(-50%);
+  transition: transform 0.3s ease;
+}
+a:hover {
+  color: hsla(0, 0%, 100%, 0.925);
+}
+
+a:hover::before {
+  transform-origin: center left;
+  transform: scaleX(1) translateY(-50%);
+}
+
+@keyframes animate {
+  from {
+    transform: translateX(0%)
+  }
+  to{
+    transform: translateX(50vw)
+  }
+

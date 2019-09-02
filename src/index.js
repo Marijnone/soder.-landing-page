@@ -1,4 +1,4 @@
-import "./styles.css";
+
 
 const canvasTag = document.querySelector("canvas");
 console.log(canvasTag);
@@ -51,7 +51,7 @@ document.addEventListener("mousemove", function(event) {
 canvasTag.addEventListener("click", function() {
   console.log(images.length);
   console.log(i);
-
+  //reset the images array 
   i = i + 1;
   if (i >= images.length) {
     i = 0;
@@ -63,8 +63,8 @@ const draw = function() {
     if (images[i].complete) {
       context.drawImage(images[i], currentX - 100, currentY - 300, 600, 400);
     }
-    currentX = currentX + (aimX - currentX) * 0.1;
-    currentY = currentY + (aimY - currentY) * 0.1;
+    currentX = currentX + (aimX - currentX) * 0.5;
+    currentY = currentY + (aimY - currentY) * 0.5;
   }
 
   requestAnimationFrame(draw);
