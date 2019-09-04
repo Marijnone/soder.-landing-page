@@ -5,9 +5,9 @@
   font-family: "OPPOSIT";
   font-style: normal;
   font-weight: 400;
-  src: url(./font/opposit-black-webfont.woff2) format("woff2");
-  src: url(./font/opposit-black-webfont.woff) format("woff");
-  src: url(./font/opposit-black-webfont.ttf) format("truetype");
+  src: url(/opposit-black-webfont.7233059a.woff2) format("woff2");
+  src: url(/opposit-black-webfont.a47d1447.woff) format("woff");
+  src: url(/opposit-black-webfont.a6826e8e.ttf) format("truetype");
 }
 
 * {
@@ -95,3 +95,6 @@ a:hover::before {
     transform: translateX(50vw);
   }
 }
+
+
+/*# sourceMappingURL=/styles.8986bff4.css.map */
